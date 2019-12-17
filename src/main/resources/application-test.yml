@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /zzb
+  port: 150
+
+name: zzb
+age: 18
+job: IT
+content: "name: ${name} age: ${age}"
+
+person:
+  name: zzb
+  age: 18
+  job: IT
+  content: "name: ${name} age: ${age}"
+
+#定位模板的目录
+spring:
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
+  thymeleaf:
+    cache: true
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
