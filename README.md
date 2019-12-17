@@ -1,1 +1,1 @@
-springboot demo 结合thymeleaf进行简单的demo演示
+springboot demo 缁撳悎thymeleaf杩涜绠�鍗曠殑demo婕旂ず
