@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.orf">
+<head>
+    <title>springboot模板渲染</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+    <div>
+        <p th:text="'用户姓名：' + ${person.name}"/>
+        <p th:text="'用户年龄：' + ${person.age}"/>
+        <p th:text="'用户工资：' + ${person.job}"/>
+    </div>
+
+    <hr/>
+    <div th:object="${person}">
+        <p th:text="'用户姓名：' + *{name}"/>
+        <p th:text="'用户年龄：' + *{age}"/>
+        <p th:text="'用户工资：' + *{job}"/>
+    </div>
+    <!--关于“${属性}”和“{属性}”的区别？
+        ${}访问完整信息，而*{}访问指定对象中的属性内容， 如果访问的只是普通的内容两者没有区别;-->
+
+</body>
+</html>

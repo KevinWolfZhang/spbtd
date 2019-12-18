@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.orf">
+<head>
+    <title>springboot模板渲染</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+    <script>
+        /*var welcom = {};
+        welcom.msg="欢迎{0}光临!"*/
+    </script>
+    <p th:text="'用户ID:' + ${uid}"></p>
+    <p th:text="'用户名称:' + ${name}"></p>
+    <p th:text="'计算: 1+2=' + (1+2)"></p>
+    <!--th:utext和th:text的区别是：th:text会对<和>进行转义，而th:utext不会转义 可以展示带样式的数据-->
+    <p th:utext="'用户职业:' + ${job}"></p>
+    <!--<h2 th:text="#{welcom.msg('admin')}"/>-->
+</body>
+</html>
